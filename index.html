@@ -130,14 +130,16 @@
         0% { opacity: 1; transform: scale(1); }
         100% { opacity: 0; transform: scale(1.25); }
     }
-    /* ❤️ INIMIOARE MICI – FÂNTÂNĂ COLORATĂ */
+    /* ❤️ INIMIOARE MICI – FÂNTÂNĂ COLORATĂ (VARIANTĂ VIZIBILĂ PE FUNDAL LUMINOS) */
 .heart-like {
     position: absolute;
     pointer-events: none;
     opacity: 0;
-    font-size: 14px;
+    font-size: 28px; /* mai mare, mai vizibil */
     animation: heartFlight var(--duration) ease-out forwards;
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.9));
+
+    /* contur negru – se vede pe orice fundal */
+    filter: drop-shadow(0 0 4px rgba(0,0,0,1));
 }
 
 /* ❤️ ZBOR ÎN SUS – PÂNĂ SUSUL ECRANULUI */
@@ -150,19 +152,21 @@
         opacity: 1;
     }
     100% {
-        transform: translate(var(--drift), calc(-1 * var(--height))) scale(1.1);
+        transform: translate(var(--drift), calc(-1 * var(--height))) scale(1.2);
         opacity: 0;
     }
 }
 
-/* 💥 PARTICULE – ARTIFICII FINALE */
+/* 💥 PARTICULE – ARTIFICII FINALE (VARIANTĂ VIZIBILĂ PE FUNDAL LUMINOS) */
 .particle {
     position: absolute;
     pointer-events: none;
     opacity: 0;
-    font-size: 18px;
+    font-size: 32px; /* mai mari, mai vizibile */
     animation: particleFly var(--p-duration) ease-out forwards;
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.9));
+
+    /* contur negru pentru contrast */
+    filter: drop-shadow(0 0 4px rgba(0,0,0,1));
 }
 
 /* 💥 ANIMAȚIE ARTIFICII */
@@ -172,10 +176,10 @@
         opacity: 1;
     }
     100% {
-        transform: translate(var(--px), var(--py)) scale(0.3);
+        transform: translate(var(--px), var(--py)) scale(0.4);
         opacity: 0;
     }
-} 
+}
 </style>
 </head>
 
